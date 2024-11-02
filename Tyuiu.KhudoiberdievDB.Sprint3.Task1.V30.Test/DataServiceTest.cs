@@ -11,7 +11,7 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task1.V30.Test
             int startValue = 1;
             int stopValue = 12;
             double value = 0.5;
-            double wait = 0.959;
+            double wait = 3.589;
             var res = ds.GetSumSeries(value, startValue, stopValue);
             Assert.AreEqual(wait, res);
         }

@@ -9,7 +9,7 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task1.V30.Lib
            double SumSeries = 0;
             while (startValue <= stopValue)
             {
-                SumSeries += (Math.Pow(value, startValue) + (5/(startValue + 4))) * (Math.Sin(value));
+                SumSeries += (Math.Pow(value, startValue) + (5.0 / (startValue + 4)))*(Math.Sin(value));
                 startValue++;
             }
             return Math.Round(SumSeries,3);
