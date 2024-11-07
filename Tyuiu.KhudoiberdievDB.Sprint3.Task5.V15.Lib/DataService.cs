@@ -11,10 +11,10 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task5.V15.Lib
             {
                 for (j = startValue2; j <= stopValue2; j++)
                 {
-                    sum = Math.Sin(x) + Math.Pow(startValue2,2) / 2;
+                    sum += (Math.Sin(x)) + (Math.Pow(j, 2)/2.0) ;
                 }
             }
-            return Math.Round(sum,3);
+            return Math.Round(sum, 3);
         }
     }
 }
