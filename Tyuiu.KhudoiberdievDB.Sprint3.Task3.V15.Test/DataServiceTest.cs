@@ -8,10 +8,14 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task3.V15.Test
         public void ValidGetCharCount()
         {
             DataService ds = new DataService();
+
             string str = "lrmmse mg sermmmrt";
             char chr = 'm';
+
             int res = ds.GetMinCharCount(str, chr);
-            int wait = 2;
+
+            int wait = 1;
+
             Assert.AreEqual(wait, res);
         }
     }

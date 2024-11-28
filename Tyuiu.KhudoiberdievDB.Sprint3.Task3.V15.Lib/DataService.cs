@@ -9,11 +9,18 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task3.V15.Lib
             List<int> list = new List<int>();
             char prev = value[0];
             int count = 1;
+            bool first = true;
             foreach (char chr in value)
             {
+                if (first)
+                {
+                    first = false;
+                    continue;
+                }
                 if (chr == item && prev == item)
                 {
                     count++;
+                    continue;
                 }
                 if (chr != item && prev == item)
                 {
@@ -22,7 +29,7 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task3.V15.Lib
                 }
                 prev = chr;
             }
-            return list.Where(i => i >= 2).Min();
+            return list.Where(i => i >= 1).Min();
         }
 
     }
