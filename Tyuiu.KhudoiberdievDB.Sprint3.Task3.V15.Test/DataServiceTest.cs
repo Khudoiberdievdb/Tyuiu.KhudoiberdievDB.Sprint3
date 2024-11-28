@@ -11,8 +11,8 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task3.V15.Test
             string str = "lrmmse mg sermmmrt";
             char chr = 'm';
             int res = ds.GetMinCharCount(str, chr);
-            int wait = 1;
-            Assert.AreEqual(res, wait);
+            int wait = 2;
+            Assert.AreEqual(wait, res);
         }
     }
 }

@@ -6,15 +6,23 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task3.V15.Lib
     {
         public int GetMinCharCount(string value, char item)
         {
-            int countletter = 0;
-            foreach (char c in value)
+            List<int> list = new List<int>();
+            char prev = value[0];
+            int count = 1;
+            foreach (char chr in value)
             {
-                if ( c == 'm' )
+                if (chr == item && prev == item)
                 {
-                    countletter++;
+                    count++;
                 }
+                if (chr != item && prev == item)
+                {
+                    list.Add(count);
+                    count = 1;
+                }
+                prev = chr;
             }
-            return countletter;
+            return list.Where(i => i >= 2).Min();
         }
 
     }
