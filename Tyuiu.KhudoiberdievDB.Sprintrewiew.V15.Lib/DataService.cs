@@ -1,25 +1,25 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint3;
-namespace Tyuiu.KhudoiberdievDB.Sprint3.Task7.V4.Lib
+﻿using tyuiu.cources.programming.interfaces;
+using tyuiu.cources.programming.interfaces.Sprint1;
+using tyuiu.cources.programming.interfaces.Sprint3;
+namespace Tyuiu.KhudoiberdievDB.Sprintrewiew.V15.Lib
 {
-    public class DataService : ISprint3Task7V4
+    public class DataService : ISprint3Task7V15
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
+
             double[] valueArray;
             int len = (stopValue - startValue) + 1;
             valueArray = new double[len];
             double y;
             int count = 0;
-            for (int i = startValue; i <= stopValue; i++)
+            for (int x = startValue; x <= stopValue; x++)
             {
-                y = Math.Sin(i) + ((2 * i) / 3) - Math.Cos(i) * 4 * i;
+                y = Math.Round(Math.Sin(x) + ((2 * x) / 3) - Math.Cos(x) * 4 * x, 2);
                 valueArray[count] = y;
                 count++;
             }
             return valueArray;
-
-
-
         }
     }
 }

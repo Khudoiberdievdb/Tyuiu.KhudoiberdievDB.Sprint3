@@ -10,6 +10,7 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task7.V4.Test
             DataService ds = new DataService();
             int startValue = -5;
             int stopValue = 5;
+
             int len = stopValue - startValue + 1;
             double[] valueWaitArray;
             valueWaitArray = new double[len];
@@ -24,7 +25,7 @@ namespace Tyuiu.KhudoiberdievDB.Sprint3.Task7.V4.Test
             valueWaitArray[8] = 2.97;
             valueWaitArray[9] = 1.18;
             valueWaitArray[10] = 0.03;
-            double[] res; 
+            double[] res;
             res = new double[len];
             res = ds.GetMassFunction(startValue, stopValue);
             CollectionAssert.AreEqual(valueWaitArray, res);
